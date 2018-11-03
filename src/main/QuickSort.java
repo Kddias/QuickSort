@@ -10,6 +10,7 @@ public class QuickSort {
 	public static int comparacoes = 0;
 	public static int trocas = 0;
 
+	// Impressao Array Ordenado
 	static void printArray(ArrayList<Character> array) {
 		int tamanho = array.size();
 		for (int i = 0; i < tamanho; ++i)
@@ -18,17 +19,8 @@ public class QuickSort {
 		JOptionPane.showMessageDialog(null, "numero de comparacoes: " + comparacoes + "\n numero de trocas: " + trocas);
 	}
 
-	/*
-	 * seleciona aleatorio public static int
-	 * randomFromCharArray(ArrayList<Character> array){
-	 * 
-	 * Random random = new Random(); int index = random.nextInt(array.size());
-	 * //return array.get(index); return index;
-	 * 
-	 * }
-	 */
 
-	// particao
+	// Particionamento
 	int particao(ArrayList<Character> array, int low, int hi) {
 
 		char pivo = array.get(hi);
@@ -55,7 +47,9 @@ public class QuickSort {
 		return i + 1;
 
 	}
-
+	
+	
+    // Particionamento pivor fixo(low)
 	int particaoFixo(ArrayList<Character> array, int low, int hi) {
 
 		// System.out.println("pivo: " + pivo);
@@ -85,6 +79,7 @@ public class QuickSort {
 
 	}
 
+	//Particionamento vetor aleatorio.
 	int particaoAleatoria(ArrayList<Character> array, int low, int hi) {
 
 		Random r = new Random();
@@ -130,9 +125,12 @@ public class QuickSort {
 
 	}
 
+	// main method
 	public static void main(String[] args) {
+		
+		// GABRIELTORESKDUZPMN
 
-		String nomes = "LEXDOSANTBRUCPIVHYFZMGJQ";
+		String nomes = "GABRIELTOSKDUZPMN";
 		ArrayList<Character> array = new ArrayList<Character>();
 		for (char c : nomes.toCharArray()) {
 			array.add(c);
